@@ -6,12 +6,12 @@ import 'screens/recipe_detail_screen.dart';
 
 void main() {
   runApp(const RecipeApp());
-}
+} // Builds and displays the recipe app widget as the root of the widget tree
 
 class RecipeApp extends StatelessWidget {
   const RecipeApp({super.key});
 
-  @override
+  @override   // The main widget of the app
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Recipe Manager',
@@ -22,7 +22,7 @@ class RecipeApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (context) => const HomeScreen(),
-        '/add': (context) => const AddEditRecipeScreen(),
+        '/add': (context) => const AddEditRecipeScreen(), 
         '/detail': (context) => const RecipeDetailScreen(),
       },
     );

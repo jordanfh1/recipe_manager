@@ -6,7 +6,7 @@ class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomeScreen> createState() => _HomeScreenState(); //
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -14,19 +14,19 @@ class _HomeScreenState extends State<HomeScreen> {
 
   void _addRecipe(Recipe recipe) {
     setState(() {
-      _recipes.add(recipe);
-    });
+      _recipes.add(recipe); // Add the new recipe to the list
+    }); 
   }
 
   void _deleteRecipe(int index) {
     setState(() {
-      _recipes.removeAt(index);
+      _recipes.removeAt(index); // Remove the recipe at the specified index
     });
   }
 
   void _editRecipe(int index, Recipe updatedRecipe) {
     setState(() {
-      _recipes[index] = updatedRecipe;
+      _recipes[index] = updatedRecipe; // Update the recipe at the specified index
     });
   }
 
@@ -34,12 +34,12 @@ class _HomeScreenState extends State<HomeScreen> {
     final newRecipe = await Navigator.push<Recipe>(
       context,
       MaterialPageRoute(
-        builder: (_) => const AddEditRecipeScreen(),
+        builder: (_) => const AddEditRecipeScreen(), // Navigate to the AddEditRecipeScreen
       ),
     );
 
     if (newRecipe != null) {
-      _addRecipe(newRecipe);
+      _addRecipe(newRecipe); // Add the new recipe to the list
     }
   }
 
