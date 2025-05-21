@@ -24,7 +24,6 @@ class RecipeApp extends StatelessWidget {
         '/': (context) => const HomeScreen(),
         '/add': (context) => const AddEditRecipeScreen(),
         '/detail': (context) => const RecipeDetailScreen(),
-        // You can pass arguments using `ModalRoute.of(context)!.settings.arguments`
       },
     );
   }
