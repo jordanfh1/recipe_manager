@@ -1,9 +1,8 @@
-
 import 'package:flutter/material.dart';
 import '../models/recipe.dart';
 
 class RecipeProvider with ChangeNotifier {
-  List<Recipe> _recipes = [];
+  final List<Recipe> _recipes = [];
 
   List<Recipe> get recipes => [..._recipes];
 
@@ -28,4 +27,5 @@ class RecipeProvider with ChangeNotifier {
   Recipe? getRecipeById(String id) {
     return _recipes.firstWhere((r) => r.id == id);
   }
+  
 }
