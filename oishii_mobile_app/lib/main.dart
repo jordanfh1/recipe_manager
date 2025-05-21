@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import './screens/home_screen.dart';
-import './screens/add_edit_recipe_screen.dart';
-import './screens/recipe_detail_screen.dart';
+import 'screens/home_screen.dart';
+import 'screens/add_edit_recipe_screen.dart';
+import 'screens/recipe_detail_screen.dart';
 
 
 void main() {
