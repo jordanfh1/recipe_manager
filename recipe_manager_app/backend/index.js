@@ -1,8 +1,17 @@
 const express = require('express');
 const Recipe = require('./models/Recipe');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const app = express();
+require('dotenv').config();
 app.use(express.json());
+
+const recipeRoutes = require('./routes/recipeRoutes');
+
+const PORT = process.env.PORT || 3000;
+
+app.use(cors());
+app.use('/recipes', recipeRoutes);
 
 
 // Connect to MongoDB
