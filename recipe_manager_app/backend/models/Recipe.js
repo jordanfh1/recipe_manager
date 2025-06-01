@@ -4,11 +4,11 @@ const recipeSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
-    }
+    },
     description: String,
     ingredients: String,
     method: String,
-    id: String } {timestamps: true});
+    id: String }, {timestamps: true});
 
 
 const Recipe = mongoose.model('Recipe', recipeSchema);
