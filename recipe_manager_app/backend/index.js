@@ -1,5 +1,5 @@
 const express = require('express');
-const Recipe = require('./models/Recipe');
+const Recipe = require('./models/Recipe.js');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const app = express();
